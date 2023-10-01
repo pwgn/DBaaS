@@ -1,0 +1,15 @@
+---
+- name: create-databases
+  hosts: mariadb
+
+  tasks:
+    - name: Create Mariadb user
+      include_role:
+        name: geerlingguy.mysql
+        tasks_from: databases.yml
+
+    - name: Create Mariadb user
+      include_role:
+        name: geerlingguy.mysql
+        tasks_from: users.yml
+

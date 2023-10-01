@@ -1,0 +1,26 @@
+mysql_databases:
+- collation: utf8_general_ci
+  encoding: utf8
+  name: testdb
+  replicate: 1
+- collation: utf8_general_ci
+  encoding: utf8
+  name: mynewdb
+  replicate: 1
+- collation: utf8_general_ci
+  encoding: utf8
+  name: pwgn
+  replicate: 1
+mysql_users:
+- host: 172.17.0.1
+  name: admin-testdb
+  password: secret
+  priv: testdb.*:ALL
+- host: 172.17.0.1
+  name: admin-mynewdb
+  password: secret
+  priv: mynewdb.*:ALL
+- host: 172.17.0.1
+  name: admin-pwgn
+  password: secret
+  priv: pwgn.*:ALL

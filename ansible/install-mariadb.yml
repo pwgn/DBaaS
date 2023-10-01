@@ -1,0 +1,8 @@
+---
+- name: install-mariadb
+  hosts: mariadb
+
+  roles:
+    - role: geerlingguy.mysql
+      become: true
+
